@@ -17,15 +17,22 @@
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_profile" />
 
-    <fragment
-        android:id="@+id/nav_rank"
-        android:name="com.example.plantpal.ui.Rank.RankFragment"
-        android:label="Rank"
-        tools:layout="@layout/fragment_rank" />
 
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.plantpal.ui.Settings.SettingsFragment"
         android:label="Settings"
         tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_view"
+        android:name="com.example.plantpal.ui.View.ViewFragment"
+        android:label="View"
+        tools:layout="@layout/fragment_view" />
+
+    <fragment
+        android:id="@+id/nav_createPlant"
+        android:name="com.example.plantpal.ui.CreatePlant.CreatePlantFragment"
+        android:label="Create"
+        tools:layout="@layout/fragment_createplant" />
 </navigation>
