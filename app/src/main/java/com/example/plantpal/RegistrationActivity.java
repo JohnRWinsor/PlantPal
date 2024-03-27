@@ -82,7 +82,7 @@ public class RegistrationActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Authentication success. Email: " + email,
                     Toast.LENGTH_SHORT).show();
             // Go to the login activity
-            startActivity(new Intent(RegistrationActivity.this, SignInActivity.class));
+            startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
         } else {
             // Log the user
             Log.d(TAG, "createUserWithEmail:failure");
