@@ -6,8 +6,6 @@
     android:padding="16dp">
 
     <!-- Username EditText -->
-
-    <!-- Email EditText -->
     <EditText
         android:id="@+id/editTextUsername"
         android:layout_width="match_parent"
@@ -15,6 +13,7 @@
         android:hint="Username"
         android:inputType="text" />
 
+    <!-- Email EditText -->
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"

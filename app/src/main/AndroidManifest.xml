@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.plantpal">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -14,8 +13,9 @@
         android:theme="@style/Theme.PlantPal"
         tools:targetApi="31">
 
+        <!-- Add LoginActivity as the main entry point -->
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.PlantPal.NoActionBar">
@@ -23,6 +23,15 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <!-- Declaration for RegistrationActivity -->
+        <activity android:name=".RegistrationActivity" />
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.PlantPal.NoActionBar">
+
         </activity>
 
     </application>
