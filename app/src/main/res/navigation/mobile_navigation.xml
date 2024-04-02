@@ -7,32 +7,33 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.plantpal.ui.home.HomeFragment"
+        android:name="com.example.plantpal.ui.Home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_profile"
         android:name="com.example.plantpal.ui.Profile.ProfileFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_profile"
         tools:layout="@layout/fragment_profile" />
 
 
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.plantpal.ui.Settings.SettingsFragment"
-        android:label="Settings"
+        android:label="@string/menu_settings"
         tools:layout="@layout/fragment_settings" />
 
     <fragment
-        android:id="@+id/nav_view"
-        android:name="com.example.plantpal.ui.View.ViewFragment"
-        android:label="View"
-        tools:layout="@layout/fragment_view" />
+        android:id="@+id/createPlantFragment"
+        android:name="com.example.plantpal.ui.CreatePlant.CreatePlantFragment"
+        android:label="Create Plant"
+        tools:layout="@layout/fragment_createplant" />
 
     <fragment
-        android:id="@+id/nav_createPlant"
-        android:name="com.example.plantpal.ui.CreatePlant.CreatePlantFragment"
-        android:label="Create"
-        tools:layout="@layout/fragment_createplant" />
+        android:id="@+id/rankFragment"
+        android:name="com.example.plantpal.ui.Rank.RankFragment"
+        android:label="@string/menu_rank"
+        tools:layout="@layout/fragment_rank" />
+
 </navigation>
