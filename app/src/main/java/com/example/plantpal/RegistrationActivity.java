@@ -1,3 +1,4 @@
+
 package com.example.plantpal;
 
 import android.content.Intent;
@@ -6,10 +7,9 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.plantpal.R;
-import com.example.plantpal.LoginActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -38,7 +38,7 @@ public class RegistrationActivity extends AppCompatActivity {
         // Set a click listener on the back button
 //        backButton.setOnClickListener(v -> {
 //            // Go to the login activity
-//            startActivity(new Intent(RegistrationActivity.this, SignInActivity.class));
+//            startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
 //        });
 
         // Set a click listener on the register button
@@ -82,7 +82,7 @@ public class RegistrationActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Authentication success. Email: " + email,
                     Toast.LENGTH_SHORT).show();
             // Go to the login activity
-            startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+            startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
         } else {
             // Log the user
             Log.d(TAG, "createUserWithEmail:failure");

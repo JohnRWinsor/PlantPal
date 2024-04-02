@@ -34,6 +34,21 @@
 
         </activity>
 
+        <!-- Declaration for CreatePlantActivity -->
+        <activity
+            android:name=".CreatePlantActivity" />
+
+        <!-- Declaration for ProfileActivity -->
+        <activity android:name=".ui.Profile.ProfileActivity" />
+
+        <!-- Declaration for SettingsActivity -->
+        <activity android:name=".ui.Setting.SettingsActivity" />
+
+        <!-- Declaration for ViewActivity -->
+        <activity android:name=".ViewActivity" />
+
+
+
     </application>
 
 </manifest>
