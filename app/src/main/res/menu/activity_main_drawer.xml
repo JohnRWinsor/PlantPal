@@ -23,18 +23,5 @@
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_settings"
             android:title="Settings" />
-<<<<<<< Updated upstream
-=======
-
-        <item
-            android:id="@+id/nav_createPlant"
-            android:icon="@drawable/ic_menu_create"
-            android:title="Add Plant" />
-
-        <item
-            android:id="@+id/action_sign_out"
-            android:title="Sign Out"
-            app:showAsAction="never" />
->>>>>>> Stashed changes
     </group>
 </menu>
