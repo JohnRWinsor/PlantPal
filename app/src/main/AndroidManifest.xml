@@ -36,16 +36,15 @@
 
         <!-- Declaration for CreatePlantActivity -->
         <activity
-            android:name=".CreatePlantActivity" />
+            android:name=".ui.Create.CreatePlantFragment" />
 
         <!-- Declaration for ProfileActivity -->
-        <activity android:name=".ui.Profile.ProfileActivity" />
+        <activity android:name=".ui.Profile.ProfileFragment" />
 
         <!-- Declaration for SettingsActivity -->
-        <activity android:name=".ui.Setting.SettingsActivity" />
+        <activity android:name=".ui.Setting.SettingsFragment" />
 
-        <!-- Declaration for ViewActivity -->
-        <activity android:name=".ViewActivity" />
+        <activity android:name=".ui.Rank.RankFragment" />
 
 
 
