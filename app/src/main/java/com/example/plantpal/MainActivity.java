@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 
+import com.example.plantpal.ui.Privacy.PrivacyFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     private FirebaseAuth auth;
+//    Button privacyPolicyButton = findViewById(R.id.nav_privacy);
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top-level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_profile, R.id.nav_settings, R.id.nav_createPlant, R.id.nav_rank)
+                R.id.nav_home, R.id.nav_settings, R.id.nav_createPlant, R.id.nav_rank, R.id.nav_privacy)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -81,4 +86,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
+//    private void navigateToPrivacyPolicy() {
+//        // Navigate to the privacy policy page, you can replace PrivacyPolicyActivity with your actual activity
+//        Intent intent = new Intent(MainActivity.this, PrivacyFragment.class);
+//        startActivity(intent);
+//    }
 }

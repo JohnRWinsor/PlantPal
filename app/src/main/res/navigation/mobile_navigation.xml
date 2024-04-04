@@ -12,12 +12,6 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_profile"
-        android:name="com.example.plantpal.ui.Profile.ProfileFragment"
-        android:label="@string/menu_profile"
-        tools:layout="@layout/fragment_profile" />
-
-    <fragment
         android:id="@+id/nav_rank"
         android:name="com.example.plantpal.ui.Rank.RankFragment"
         android:label="@string/menu_rank"
@@ -39,12 +33,15 @@
     <fragment
         android:id="@+id/nav_privacy"
         android:name="com.example.plantpal.ui.Privacy.PrivacyFragment"
-        android:label="Privacy Policy"
+        android:label="@string/menu_privacy"
         tools:layout="@layout/fragment_privacy" />
 
-    <action
-        android:id="@+id/action_loginFragment_to_privacyFragment"
-        app:destination="@id/nav_privacy" />
+    <fragment
+        android:id="@+id/nav_view"
+        android:name="com.example.plantpal.ui.View.ViewPlantFragment"
+        android:label="@string/menu_view"
+        tools:layout="@layout/fragment_view" />
+
 
 
 
