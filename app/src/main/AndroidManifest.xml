@@ -35,8 +35,9 @@
         </activity>
 
         <!-- Declaration for CreatePlantActivity -->
-        <activity
-            android:name=".ui.Create.CreatePlantFragment" />
+
+
+        <activity android:name=".ui.Create.CreatePlantFragment" />
 
         <!-- Declaration for ProfileActivity -->
         <activity android:name=".ui.Profile.ProfileFragment" />

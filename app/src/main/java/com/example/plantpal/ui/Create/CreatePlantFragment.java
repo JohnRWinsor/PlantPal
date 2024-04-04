@@ -1,4 +1,4 @@
-package com.example.plantpal.ui.CreatePlant;
+package com.example.plantpal.ui.Create;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

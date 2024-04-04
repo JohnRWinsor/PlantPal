@@ -25,14 +25,17 @@
 
     <fragment
         android:id="@+id/nav_settings"
-        android:name="com.example.plantpal.ui.Settings.SettingsFragment"
+        android:name="com.example.plantpal.ui.Setting.SettingsFragment"
         android:label="@string/menu_settings"
         tools:layout="@layout/fragment_settings" />
 
 
     <fragment
         android:id="@+id/nav_createPlant"
-        android:name="com.example.plantpal.ui.CreatePlant.CreatePlantFragment"
+        android:name="com.example.plantpal.ui.Create.CreatePlantFragment"
         android:label="@string/menu_create"
         tools:layout="@layout/fragment_createplant" />
+
+
+
 </navigation>
