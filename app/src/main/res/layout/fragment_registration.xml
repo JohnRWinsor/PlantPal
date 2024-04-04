@@ -6,15 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp">
 
-    <!-- Sign Up Title -->
-
-    <!-- Email EditText -->
-
-    <!-- Password EditText -->
-
-    <!-- Image -->
-
-    <!-- Register Button -->
 
     <TextView
         android:id="@+id/textViewSignUp"
@@ -57,7 +48,7 @@
         android:id="@+id/imageView"
         android:layout_width="127dp"
         android:layout_height="190dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:src="@drawable/plant"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

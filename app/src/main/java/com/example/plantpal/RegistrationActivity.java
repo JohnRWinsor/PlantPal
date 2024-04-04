@@ -34,8 +34,8 @@ public class RegistrationActivity extends AppCompatActivity {
 
         // Get the back button
 //        Button backButton = findViewById(R.id.buttonBack);
-
-        // Set a click listener on the back button
+//
+//         Set a click listener on the back button
 //        backButton.setOnClickListener(v -> {
 //            // Go to the login activity
 //            startActivity(new Intent(RegistrationActivity.this, SignInActivity.class));

@@ -47,6 +47,8 @@
 
         <activity android:name=".ui.Rank.RankFragment" />
 
+        <activity android:name=".ui.Privacy.PrivacyFragment" />
+
 
 
     </application>
