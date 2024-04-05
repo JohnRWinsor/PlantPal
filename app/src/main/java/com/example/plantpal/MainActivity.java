@@ -20,7 +20,7 @@ import com.example.plantpal.databinding.ActivityMainBinding;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity  {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
@@ -56,34 +56,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         // Set up navigation drawer
-        navigationView.setNavigationItemSelectedListener(this);
+//        navigationView.setNavigationItemSelectedListener(this);
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.nav_sign_out) {
-            // Handle sign-out action here
-            // Example: Call a sign-out method or navigate to the login screen
-            signOut();
-        }
-
-        // Close the navigation drawer
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
-
-    private void signOut() {
-        // Perform sign-out logic here, such as clearing user session or revoking access token
-
-        // After sign-out, navigate the user back to the login page
-        Intent intent = new Intent(this, LoginActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-        finish(); // Finish the current activity to prevent returning to it when pressing back
-    }
+//    @Override
+//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//        int id = item.getItemId();
+//
+//        if (id == R.id.nav_sign_out) {
+//            // Handle sign-out action here
+//            // Example: Call a sign-out method or navigate to the login screen
+//            signOut();
+//        }
+//
+//        // Close the navigation drawer
+//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+//        drawer.closeDrawer(GravityCompat.START);
+//        return true;
+//    }
+//
+//    private void signOut() {
+//        // Perform sign-out logic here, such as clearing user session or revoking access token
+//
+//        // After sign-out, navigate the user back to the login page
+//        Intent intent = new Intent(this, LoginActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+//        startActivity(intent);
+//        finish(); // Finish the current activity to prevent returning to it when pressing back
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
