@@ -1,27 +1,29 @@
-package com.example.plantpal.ui.Setting;
+package com.example.plantpal.ui.Data;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.example.plantpal.MainActivity;
 import com.example.plantpal.R;
 
-public class SettingsFragment extends Fragment {
+public class DataViewFragment extends Fragment {
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_settings, container, false);
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_data, container, false);
 
-        // Initialize views or perform any other setup here
-        ImageButton imageButtonNewBack = root.findViewById(R.id.imageButtonSettingsBack);
+        ImageButton imageButtonNewBack = view.findViewById(R.id.imageButtonDataBack);
         imageButtonNewBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,6 +33,7 @@ public class SettingsFragment extends Fragment {
             }
         });
 
-        return root;
+
+        return view;
     }
 }

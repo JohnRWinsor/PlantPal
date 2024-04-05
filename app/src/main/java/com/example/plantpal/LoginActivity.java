@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.plantpal.ui.Privacy.PrivacyFragment;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -49,17 +49,10 @@ public class LoginActivity extends AppCompatActivity {
         registerButton.setOnClickListener(v -> navigateToRegistrationActivity());
 
        // Aet OnClickListener for Privacy button
-//        privacyButton.setOnClickListener(v -> navigateToPrivacyPolicy());
+        privacyButton.setOnClickListener(v -> navigateToPrivacyPolicy());
     }
 
-    // Method to navigate to the Privacy Policy page
-//    private void navigateToPrivacyPolicy() {
-//        // Navigate to the activity that hosts the PrivacyFragment
-//        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//        // Pass any necessary data to the activity if needed
-//        intent.putExtra("fragment_to_load", "privacy");
-//        startActivity(intent);
-//    }
+
 
     // Method to sign in with email and password
     private void signInWithEmailAndPassword(String email, String password) {
@@ -86,6 +79,21 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void navigateToPrivacyPolicy() {
+        Intent intent = new Intent(LoginActivity.this, PrivacyActivity.class);
+        startActivity(intent);
+    }
+
+    // Method to sign out the user
+    private void signOut() {
+        mAuth.signOut(); // Sign out from Firebase Authentication
+
+        // After sign-out, navigate the user back to the login page
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish(); // Finish the current activity to prevent returning to it when pressing back
+    }
 
 
     // Method to update UI based on Firebase user authentication

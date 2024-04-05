@@ -2,53 +2,38 @@ package com.example.plantpal;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.view.MenuItem;
 import android.view.Menu;
-import android.widget.Button;
+import android.view.Gravity;
 
-import com.example.plantpal.ui.Privacy.PrivacyFragment;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.plantpal.databinding.ActivityMainBinding;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     private FirebaseAuth auth;
-//    Button privacyPolicyButton = findViewById(R.id.nav_privacy);
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance();
-
-        // Check if user is authenticated
-        FirebaseUser currentUser = auth.getCurrentUser();
-        if (currentUser == null) {
-            // User is not authenticated, redirect to LoginActivity
-            startActivity(new Intent(this, LoginActivity.class));
-            finish(); // Finish MainActivity to prevent going back to it after logging in
-            return;
-        }
 
         setSupportActionBar(binding.appBarMain.toolbar);
         DrawerLayout drawer = binding.drawerLayout;
@@ -57,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top-level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_settings, R.id.nav_createPlant, R.id.nav_rank, R.id.nav_privacy)
+                R.id.nav_home, R.id.nav_settings, R.id.nav_sign_out, R.id.nav_rank)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -69,6 +54,35 @@ public class MainActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle("Menu");
         }
+
+        // Set up navigation drawer
+        navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.nav_sign_out) {
+            // Handle sign-out action here
+            // Example: Call a sign-out method or navigate to the login screen
+            signOut();
+        }
+
+        // Close the navigation drawer
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    private void signOut() {
+        // Perform sign-out logic here, such as clearing user session or revoking access token
+
+        // After sign-out, navigate the user back to the login page
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish(); // Finish the current activity to prevent returning to it when pressing back
     }
 
     @Override
@@ -83,15 +97,5 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
-
-
     }
-
-
-
-//    private void navigateToPrivacyPolicy() {
-//        // Navigate to the privacy policy page, you can replace PrivacyPolicyActivity with your actual activity
-//        Intent intent = new Intent(MainActivity.this, PrivacyFragment.class);
-//        startActivity(intent);
-//    }
 }

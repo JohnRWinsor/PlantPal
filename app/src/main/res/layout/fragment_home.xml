@@ -97,8 +97,10 @@
         android:layout_height="107dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="32dp"
+        android:clickable="true"
         android:src="@drawable/plant"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/progressBar" />
+        app:layout_constraintTop_toTopOf="@id/progressBar"
+        android:focusable="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,15 +30,16 @@
         android:label="@string/menu_create"
         tools:layout="@layout/fragment_createplant" />
 
-    <fragment
-        android:id="@+id/nav_privacy"
-        android:name="com.example.plantpal.ui.Privacy.PrivacyFragment"
-        android:label="@string/menu_privacy"
-        tools:layout="@layout/fragment_privacy" />
 
     <fragment
         android:id="@+id/nav_view"
         android:name="com.example.plantpal.ui.View.ViewPlantFragment"
+        android:label="@string/menu_view"
+        tools:layout="@layout/fragment_view" />
+
+    <fragment
+        android:id="@+id/nav_data"
+        android:name="com.example.plantpal.ui.Data.DataViewFragment"
         android:label="@string/menu_view"
         tools:layout="@layout/fragment_view" />
 

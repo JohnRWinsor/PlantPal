@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +30,17 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 // Navigate to CreatePlantFragment using NavController
                 Navigation.findNavController(view).navigate(R.id.nav_createPlant);
+            }
+        });
+
+        // Find the ImageView for the plant
+        ImageView imageViewPlant = root.findViewById(R.id.imageView4);
+        // Set an OnClickListener for the plant ImageView
+        imageViewPlant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Navigate to CreatePlantFragment using NavController
+                Navigation.findNavController(view).navigate(R.id.nav_view);
             }
         });
 

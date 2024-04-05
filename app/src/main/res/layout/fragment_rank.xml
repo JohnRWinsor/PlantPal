@@ -277,4 +277,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textYouAre" />
 
+    <ImageButton
+        android:id="@+id/imageButtonRankBack"
+        android:layout_width="52dp"
+        android:layout_height="47dp"
+        app:srcCompat="@drawable/baseline_arrow_back_24"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="4dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

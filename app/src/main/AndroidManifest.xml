@@ -25,9 +25,13 @@
             </intent-filter>
         </activity>
 
+        <!-- Declaration for PrivacyActivity -->
+        <activity android:name=".PrivacyActivity" />
+
         <!-- Declaration for RegistrationActivity -->
         <activity android:name=".RegistrationActivity" />
 
+        <!-- Declaration for MainActivity -->
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.PlantPal.NoActionBar">
@@ -35,7 +39,6 @@
         </activity>
 
         <!-- Declaration for CreatePlantActivity -->
-
 
         <activity android:name=".ui.Create.CreatePlantFragment" />
 
@@ -45,7 +48,6 @@
 
         <activity android:name=".ui.Rank.RankFragment" />
 
-        <activity android:name=".ui.Privacy.PrivacyFragment" />
 
 
 

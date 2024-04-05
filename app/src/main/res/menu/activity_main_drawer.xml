@@ -22,8 +22,8 @@
             android:title="@string/menu_settings" />
 
         <item
-            android:id="@+id/action_sign_out"
-            android:title="Sign Out"
-            app:showAsAction="never" />
+            android:id="@+id/nav_sign_out"
+            android:title="@string/sign_out" />
+
     </group>
 </menu>
