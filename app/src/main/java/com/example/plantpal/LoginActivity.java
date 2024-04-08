@@ -1,3 +1,10 @@
+/*
+ This activity handles user login functionality. It allows users to sign in with their email
+ and password using Firebase Authentication. If the user is already signed in, it redirects
+ them to the MainActivity. It also provides options for users to navigate to the registration
+ page to create a new account or view the privacy policy.
+ */
+
 package com.example.plantpal;
 
 import android.content.Intent;
@@ -79,6 +86,7 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // Method to navigate to PrivacyActivity
     private void navigateToPrivacyPolicy() {
         Intent intent = new Intent(LoginActivity.this, PrivacyActivity.class);
         startActivity(intent);

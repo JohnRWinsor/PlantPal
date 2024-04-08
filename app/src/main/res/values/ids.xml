@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!--
+This XML file defines resource items for IDs used in navigation-related components.
+
+These resource IDs are used to reference specific elements within navigation-related components.
+-->
 <resources>
     <item name="nav_host_fragment" type="id" />
     <item name="container_layout_id" type="id" />

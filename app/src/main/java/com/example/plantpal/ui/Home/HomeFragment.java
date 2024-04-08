@@ -1,3 +1,8 @@
+/*
+This is the file that has the functionally for the Home page with a clickable button that takes you back to your previous page
+and a floating action button taking you to the create plant page
+ */
+
 package com.example.plantpal.ui.Home;
 
 import android.content.Intent;
@@ -24,6 +29,7 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
+        // Find the Floating Action Button for the navigation to create plant
         FloatingActionButton fab = root.findViewById(R.id.floatingActionButton2);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +41,7 @@ public class HomeFragment extends Fragment {
 
         // Find the ImageView for the plant
         ImageView imageViewPlant = root.findViewById(R.id.imageView4);
+
         // Set an OnClickListener for the plant ImageView
         imageViewPlant.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,3 +1,8 @@
+/*
+This is the file that has the functionally for the View plant page with a clickable button that takes you back to your previous page
+and a another clickable button that takes you to the Data view page where you can view your plant data
+ */
+
 package com.example.plantpal.ui.View;
 
 import android.app.Activity;
@@ -24,6 +29,7 @@ public class ViewPlantFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_view, container, false);
 
+        // Initialize the back button and set its onClickListener to navigate back to MainActivity
         ImageButton imageButtonNewBack = view.findViewById(R.id.imageButtonViewBack);
         imageButtonNewBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +40,7 @@ public class ViewPlantFragment extends Fragment {
             }
         });
 
+        // Initialize the back button and set its onClickListener to navigate to the Plant data page
         Button viewDataButton = view.findViewById(R.id.buttonData);
         viewDataButton.setOnClickListener(new View.OnClickListener() {
             @Override

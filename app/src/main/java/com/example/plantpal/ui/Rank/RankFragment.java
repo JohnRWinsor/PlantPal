@@ -1,3 +1,8 @@
+/*
+This is the file that has the functionally for the Rank page with a clickable button that takes you back to your previous page
+ */
+
+
 package com.example.plantpal.ui.Rank;
 
 import android.app.Activity;
@@ -20,8 +25,10 @@ public class RankFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_rank, container, false);
 
+        // Initialize the back button and set its onClickListener to navigate back to MainActivity
         ImageButton imageButtonNewBack = view.findViewById(R.id.imageButtonRankBack);
         imageButtonNewBack.setOnClickListener(new View.OnClickListener() {
             @Override

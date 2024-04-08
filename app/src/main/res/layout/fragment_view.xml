@@ -1,46 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    This layout file represents a plant monitoring UI, displaying various parameters like temperature, air humidity, and moisture level.
+-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textViewPercent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="160dp"
-        android:text="45%"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textViewHum"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewHappy" />
-
-    <TextView
-        android:id="@+id/textViewLevel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="112dp"
-        android:text="HIGH"
-        android:textColor="#74D602"
-        app:layout_constraintStart_toEndOf="@+id/textViewMoist"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewHappy" />
-
-    <TextView
-        android:id="@+id/textViewTemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="76dp"
-        android:text="Temperature"
-        android:textColor="#029300 "
-        app:layout_constraintEnd_toStartOf="@+id/textViewDegree"
-        app:layout_constraintHorizontal_bias="0.978"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewHappy" />
-
+    <!-- Plant Name TextView -->
     <TextView
         android:id="@+id/textViewPlantName"
         android:layout_width="255dp"
@@ -54,16 +22,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Plant Image -->
     <ImageView
         android:id="@+id/imageViewImage"
         android:layout_width="122dp"
         android:layout_height="119dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintBottom_toTopOf="@+id/imageViewHappy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPlantName"
         app:srcCompat="@drawable/baseline_image_24" />
 
+    <!-- Happy Image -->
     <ImageView
         android:id="@+id/imageViewHappy"
         android:layout_width="86dp"
@@ -75,29 +46,46 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewPlantName"
         app:srcCompat="@drawable/happy" />
 
+    <!-- Air Humidity TextView -->
     <TextView
         android:id="@+id/textViewHum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
         android:layout_marginTop="160dp"
-        android:text="Air Humidty"
-        android:textColor="#029300 "
+        android:text="Air Humidity"
+        android:textColor="#029300"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewHappy" />
 
+    <!-- Moisture Level TextView -->
     <TextView
         android:id="@+id/textViewMoist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:text="Moisture Level"
-        android:textColor="#029300 "
+        android:textColor="#029300"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.269"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewHappy" />
 
+    <!-- Temperature TextView -->
+    <TextView
+        android:id="@+id/textViewTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="76dp"
+        android:text="Temperature"
+        android:textColor="#029300"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDegree"
+        app:layout_constraintHorizontal_bias="0.978"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHappy" />
+
+    <!-- Temperature Degree TextView -->
     <TextView
         android:id="@+id/textViewDegree"
         android:layout_width="wrap_content"
@@ -108,6 +96,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewHappy" />
 
+    <!-- Moisture Level TextView -->
+    <TextView
+        android:id="@+id/textViewLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="112dp"
+        android:text="HIGH"
+        android:textColor="#74D602"
+        app:layout_constraintStart_toEndOf="@+id/textViewMoist"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHappy" />
+
+    <!-- Air Humidity Percentage TextView -->
+    <TextView
+        android:id="@+id/textViewPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="160dp"
+        android:text="45%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewHum"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHappy" />
+
+    <!-- Back Button -->
     <ImageButton
         android:id="@+id/imageButtonViewBack"
         android:layout_width="59dp"
@@ -118,6 +132,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_arrow_back_24" />
 
+    <!-- View Data Button -->
     <Button
         android:id="@+id/buttonData"
         android:layout_width="wrap_content"

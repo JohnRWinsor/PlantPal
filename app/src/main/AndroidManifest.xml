@@ -39,17 +39,14 @@
         </activity>
 
         <!-- Declaration for CreatePlantActivity -->
-
         <activity android:name=".ui.Create.CreatePlantFragment" />
 
 
         <!-- Declaration for SettingsActivity -->
         <activity android:name=".ui.Setting.SettingsFragment" />
 
+        <!-- Declaration for RankFragment -->
         <activity android:name=".ui.Rank.RankFragment" />
-
-
-
 
     </application>
 

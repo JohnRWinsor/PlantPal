@@ -1,3 +1,12 @@
+/*
+ This activity serves as the main entry point for the application. It hosts the navigation drawer
+ and handles navigation between different fragments using the Navigation component. Users can
+ access various destinations such as the home screen, settings, rank, and sign out options from
+ the navigation drawer. Additionally, it provides options in the action bar menu. The activity
+ also initializes Firebase Authentication to manage user sign-in and sign-out functionality.
+ */
+
+
 package com.example.plantpal;
 
 import android.content.Intent;
@@ -54,36 +63,8 @@ public class MainActivity extends AppCompatActivity  {
         if (actionBar != null) {
             actionBar.setTitle("Menu");
         }
-
-        // Set up navigation drawer
-//        navigationView.setNavigationItemSelectedListener(this);
     }
 
-//    @Override
-//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//        int id = item.getItemId();
-//
-//        if (id == R.id.nav_sign_out) {
-//            // Handle sign-out action here
-//            // Example: Call a sign-out method or navigate to the login screen
-//            signOut();
-//        }
-//
-//        // Close the navigation drawer
-//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-//        drawer.closeDrawer(GravityCompat.START);
-//        return true;
-//    }
-//
-//    private void signOut() {
-//        // Perform sign-out logic here, such as clearing user session or revoking access token
-//
-//        // After sign-out, navigate the user back to the login page
-//        Intent intent = new Intent(this, LoginActivity.class);
-//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-//        startActivity(intent);
-//        finish(); // Finish the current activity to prevent returning to it when pressing back
-//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -94,7 +75,9 @@ public class MainActivity extends AppCompatActivity  {
 
     @Override
     public boolean onSupportNavigateUp() {
+        // Get the NavController associated with the main navigation host fragment
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+        // Navigate up to the previous destination if possible, or call the default behavior
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }

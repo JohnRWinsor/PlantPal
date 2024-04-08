@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    This layout file represents a navigation drawer header with an image, title, and subtitle.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -12,6 +15,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+    <!-- Image View for Profile Image -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="91dp"
@@ -20,6 +24,7 @@
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:srcCompat="@drawable/image" />
 
+    <!-- Title TextView -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,6 +32,7 @@
         android:text="@string/nav_header_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
+    <!-- Subtitle TextView -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"

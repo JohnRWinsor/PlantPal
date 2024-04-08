@@ -1,3 +1,7 @@
+/*
+This is the file that has the functionally for the Settings page with a clickable button that takes you back to your previous page
+ */
+
 package com.example.plantpal.ui.Setting;
 
 import android.content.Intent;

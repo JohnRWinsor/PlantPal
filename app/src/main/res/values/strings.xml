@@ -1,3 +1,29 @@
+<!--
+This XML file defines string resources for Plant Pal application.
+
+- app_name: The name of the application.
+- navigation_drawer_open: Text displayed when the navigation drawer is opened.
+- navigation_drawer_close: Text displayed when the navigation drawer is closed.
+- nav_header_title: Title for the navigation header.
+- nav_header_subtitle: Subtitle for the navigation header.
+- nav_header_desc: Description for the navigation header.
+- action_settings: Text for the Settings action.
+
+- menu_home: Text for the Home menu item.
+- menu_settings: Text for the Settings menu item.
+- menu_rank: Text for the Rank menu item.
+- menu_create: Text for the CreatePlant menu item.
+- menu_view: Text for the View menu item.
+- privacy_policy: Text for the Privacy Policy.
+- menu_data: Text for the Data menu item.
+- dark_mode: Text for the Dark Mode setting.
+- email: Text for the Email input field.
+- change: Text for the change action.
+- password: Text for the Password input field.
+- changeDataView: Text for the change data view.
+- sign_out: Text for the Sign Out action.
+-->
+
 <resources>
     <string name="app_name">Plant Pal</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

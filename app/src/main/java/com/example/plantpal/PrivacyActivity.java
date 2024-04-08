@@ -1,3 +1,10 @@
+/*
+ This activity displays the privacy policy of the application. It is launched when users
+ choose to view the privacy policy from the LoginActivity. The activity shows the content
+ of the privacy policy layout file and provides a back button for users to navigate back
+ to the LoginActivity.
+ */
+
 package com.example.plantpal;
 
 import android.app.Activity;

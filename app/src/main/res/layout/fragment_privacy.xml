@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    This layout file represents a privacy policy screen UI, including the title "Privacy"
+    and a text view explaining the privacy policy details.
+-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Privacy Title TextView -->
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
@@ -21,6 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.066" />
 
+    <!-- Privacy Policy TextView -->
     <TextView
         android:id="@+id/textView10"
         android:layout_width="284dp"
@@ -34,6 +40,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Back Button ImageButton -->
     <ImageButton
         android:id="@+id/imageButtonBack"
         android:layout_width="59dp"
@@ -43,6 +50,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_arrow_back_24" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

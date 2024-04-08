@@ -1,3 +1,11 @@
+/*
+ This activity handles user registration functionality. It allows users to create a new account
+ by providing their email and password. If registration is successful, it logs in the user and
+ redirects them to the MainActivity. If registration fails, it displays an error message to the
+ user. The activity includes input fields for email and password, as well as a register button
+ to initiate the registration process.
+ */
+
 package com.example.plantpal;
 
 import android.content.Intent;

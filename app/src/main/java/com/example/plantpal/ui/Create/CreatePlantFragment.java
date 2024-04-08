@@ -1,3 +1,8 @@
+/*
+This is the file that has the functionally for the create plant page with a clickable button that takes you back to your previous page
+ */
+
+
 package com.example.plantpal.ui.Create;
 
 import android.app.Activity;
@@ -22,6 +27,7 @@ public class CreatePlantFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_createplant, container, false);
 
+        // Image on the page turned into a button to take you to main activity
         ImageButton imageButtonNewBack = view.findViewById(R.id.imageButtonNewBack);
         imageButtonNewBack.setOnClickListener(new View.OnClickListener() {
             @Override

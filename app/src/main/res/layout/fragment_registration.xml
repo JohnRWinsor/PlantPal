@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    This layout file represents a Sign Up UI, allowing users to register with an email and password.
+-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp">
 
-
+    <!-- Sign Up TextView -->
     <TextView
         android:id="@+id/textViewSignUp"
         android:layout_width="wrap_content"
@@ -20,6 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Email EditText -->
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="0dp"
@@ -32,6 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSignUp" />
 
+    <!-- Password EditText -->
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="0dp"
@@ -44,6 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
+    <!-- Image -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="127dp"
@@ -54,6 +60,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
+    <!-- Register Button -->
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="313dp"

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    This layout file represents a sign-in screen UI, including email and password fields,
+    login and register buttons, and a privacy policy button.
+-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -81,6 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
         android:layout_marginTop="16dp"/>
 
+    <!-- Privacy Policy Button -->
     <Button
         android:id="@+id/privacyButton"
         android:layout_width="wrap_content"
@@ -98,6 +103,5 @@
         app:layout_constraintTop_toBottomOf="@+id/registerButton"
         app:layout_constraintVertical_bias="1.0"
         android:focusable="true" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
